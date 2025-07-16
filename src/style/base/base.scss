@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  background-color: #333;
+}
+
+@layer utilities {
+  .writing-vertical {
+    writing-mode: vertical-lr;
+    -webkit-writing-mode: vertical-lr;
+  }
+
+  @keyframes treeShadow {
+    0%,
+    50%,
+    100% {
+      transform: rotate(0);
+      opacity: 1;
+    }
+    25%,
+    75% {
+      transform: rotate(1deg);
+      opacity: 0.8;
+    }
+  }
+
+  .animate-treeShadow {
+    animation: treeShadow 10s ease infinite;
+    transform-origin: right top;
+  }
+}
